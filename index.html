@@ -4,12 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>@import "/style.css";</style>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTPNRSKBDV"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZTPNRSKBDV');
+    </script>
+
     <title>Danatious</title>
 </head>
-<body>
-    <div id='header'>
-        <p>Header test!</p>
+<body id='body'>
+    
+
+
+    <header>
+        
+        <img class='header-image' src='images/logo.png'>
+        <p><a href='/' style='text-decoration: none;color: var(--header-text);'>Danatious</a></p>
+        <div id="header-right">
+            <a href="#footer">Contact</a>
+            <a href="#footer">Extras</a>
+        </div>
+    </header>
+    
+        
+    <div class='main-content'>
+        <div class="side-container">
+            <div class='ad-side'>
+                
+            </div>
+        </div>
+
+        <div class='content'>
+            <h1 style='text-align: center;'>About me</h1>    
+            <p>I'm a Twitch streamer, YouTuber, and non-professional software developer. I dabble in just about anything that interests me, so what I do is pretty hard to pin down.</p>
+            <hr>
+            <h2>My Interests</h2>
+            <p>I specialize in Java, Python, Javascript, and C#. My main focus is creating software that can interact with networked systems, such as Discord bots or webservices. If you'd like to speak with me, please see my contact information <a href='#footer'>here</a>.</p>
+            <hr>
+            <h2>Featured Content</h2>
+            <div>
+                <div class="grid-container">
+                    <a href='https://github.com/DanTheProgrammer/TGCtunes' class='item'><h3>TGCtunes</h3><hr><p>A Discord bot for playing music, because freedom! Also contains grub generator.</p></a>
+                    <a href='https://www.youtube.com/channel/UCNXJjYbOAxUKYsFLWibvESw/' class='item'><h3>YouTube Channel</h3><hr><p>I play video games, but what else is new?</p></a>
+                    <a href='https://twitch.tv/danatious' class='item'><h3>Twitch Channel</h3><hr><p>I do things live as well!</p></a>
+                    <a href='https://discord.com/invite/7M2nbrPByU' class='item'><h3>Discord Server</h3><hr><p>Join my community!</p></a>
+                    
+                </div>
+                
+                <div class="grid-container">
+                    <div class='item'></div>
+                    <div class='item'></div>
+                    <div class='item'></div>
+                    <div class='item'></div>
+                    
+                </div>
+            </div>
+            <br><hr>
+            <h2>Most Recent Video</h2>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <iframe id="youtube_video" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+            <script>
+                var channelID = "UCNXJjYbOAxUKYsFLWibvESw";
+                var reqURL = "https://www.youtube.com/feeds/videos.xml?channel_id=";
+                $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(reqURL)+channelID, function(data) {
+                var link = data.items[0].link;
+                var id = link.substr(link.indexOf("=")+1);
+                $("#youtube_video").attr("src","https://youtube.com/embed/"+id + "?controls=0&showinfo=0&rel=0");
+                });
+            </script>
+
+        </div>
+
+        <div class="side-container float-right">
+            <div class='ad-side float-right'>
+                
+            </div>
+        </div>
     </div>
+
+    <footer id="footer">
+        <h2>Contacting Danatious</h2>
+        <p>I can be reached at my twitter handle: @Danatious1. For business inquires, please reach me at twitch.email.danatious@gmail.com</p>
+        <p>At some point, my Minecraft server will be hosted at <a>mc.danatious.tk</a></p>
+    </footer>
+    
+    
+        
 </body>
 </html>
