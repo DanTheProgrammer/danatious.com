@@ -164,18 +164,49 @@ footer {
 }
 
 #youtube_video {
-    margin-left: 26%;
+    margin-left: 21em;
 }
 
 @media screen and (max-width: 600px) {
-  #header-right {
-    flex-flow: column;
+  header {
+      width: max-content;
   }
-  #header-right a {
-    margin-bottom: 4px;
-    margin-right: 0px;
+  footer {
+    width: 180vw;
+  }
+  h2 {
+      font-size: 24pt;
+  }
+  p {
+      font-size: 16pt;
   }
   .side-container {
       display: none;
+  }
+  .content {
+      width: 42em;
+      border: none;
+  }
+  #youtube_video {
+    margin-left: 2em;
+  }
+  .item {
+      width: 8em;
+      height: 6em;
+  }
+  .item p {
+    display: none;
+  }
+  .item hr {
+    display: none;
+  }
+  .item {
+    display: table;
+    overflow: hidden;
+   
+  }
+  .item h3 {
+    display: table-cell;
+    vertical-align: middle;
   }
 }
